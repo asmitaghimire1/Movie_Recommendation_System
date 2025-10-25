@@ -8,7 +8,7 @@ The system takes a movie title as input and returns the **top 20 most similar mo
 
 ## Dataset Description
 The dataset contains detailed metadata about movies.  
-Below are the columns used:
+Below are the columns in the csv file used:
 
 | Column Name | Description |
 |--------------|-------------|
@@ -41,12 +41,12 @@ Below are the columns used:
 
 ## How It Works
 1. **Data Preprocessing**
-   - Selected useful text features such as *genres, keywords, cast, crew,* and *overview*.
-   - Cleaned and combined these features into a single string for each movie.
+   - Selected useful text features such as *genres, keywords, tagline, cast,* and *director*.
    - Handled missing values and text normalization.
+   - Cleaned and combined these features into a single string for each movie.
 
 2. **Feature Extraction**
-   - Converted the combined textual data into numerical vectors using **CountVectorizer** or **TfidfVectorizer**.
+   - Converted the combined textual data into numerical vectors using **TfidfVectorizer**.
 
 3. **Similarity Computation**
    - Computed pairwise **Cosine Similarity** scores between all movie vectors.
