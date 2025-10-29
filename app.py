@@ -4,17 +4,16 @@ import difflib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# -----------------------------
-# Load Dataset
-# -----------------------------
+# Loading Dataset
+
 movies_data = pd.read_csv('movies.csv')
 
-# Fill missing values for selected features
+# Filling missing values for selected features
 selected_features = ['genres', 'keywords', 'tagline', 'cast', 'director']
 for feature in selected_features:
     movies_data[feature] = movies_data[feature].fillna('')
 
-# Combine features
+# Combining features
 combined_features = (
     movies_data['genres'] + ' ' +
     movies_data['keywords'] + ' ' +
@@ -23,7 +22,7 @@ combined_features = (
     movies_data['director']
 )
 
-# Convert text to TF-IDF vectors
+# Converting text to TF-IDF vectors
 vectorizer = TfidfVectorizer()
 feature_vectors = vectorizer.fit_transform(combined_features)
 
@@ -60,3 +59,4 @@ if st.button("Recommend"):
 
     except:
         st.error("Movie not found! Please check your selection.")
+
