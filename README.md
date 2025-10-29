@@ -57,3 +57,6 @@ Below are the columns in the csv file used:
      - Finds movies with the highest similarity scores.
      - Returns the **top 20 most similar titles**.
 
+## Example
+<img width="919" height="841" alt="image" src="https://github.com/user-attachments/assets/ee1a0598-34b8-49c2-9eab-4070e4c3c48b" />
+
