@@ -6,7 +6,7 @@ The system takes a movie title as input and returns the **top 20 most similar mo
 
 ---
 
-## Dataset Description
+## Dataset Description  
 The dataset contains detailed metadata about movies.  
 Below are the columns in the csv file used:
 
